@@ -1,0 +1,37 @@
+#Net parameters of WHDLD
+dataset_name: 'WHDLD'
+num_classes: 6
+num_epochs: 20
+batch_size: 16
+learning_rate: 0.2
+momentum: 0.5
+weight_decay: 3e-4
+resnet_name: 'resnet50'
+scale: [256, 256]
+is_scale: False
+---
+#Net parameters of DLRSD
+dataset_name: 'DLRSD'
+num_classes: 17
+num_epochs: 90
+batch_size: 16
+learning_rate: 0.025
+momentum: 0.9
+weight_decay: 5e-4
+resnet_name: 'resnet50'
+scale: [256, 256]
+is_scale: True
+---
+#path parameters
+data_url: './dataset/'
+checkpoint_path: './saved_models/'
+pred_path: './pred/'
+---
+#device parameters
+device_target: 'Ascend'
+is_parallel: False
+device_num: 8
+Modelarts_mode: True
+ckpt_url: ''
+dataset_index: 0
+name: 'MODEL'
